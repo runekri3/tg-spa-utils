@@ -11,11 +11,11 @@ import { Attachments, Query, Resource, ResourceMethods } from 'tg-resources';
 export interface ActionPayload<
     KW extends Kwargs<KW> = {}, Data = any
 > {
+    method?: ResourceMethods;
     kwargs?: KW | null;
     query?: Query | null;
     data?: Data;
     attachments?: Attachments | null;
-    method?: ResourceMethods;
 }
 
 /**
